@@ -169,14 +169,20 @@ sub _glob_to_regexp {
 }
 
 sub _expand {
-    my ( $self, $name, $tests ) = @_;
+    my ( $self, $match_test, $tests ) = @_;
+    my $pattern;
 
-    my $pattern = $self->_glob_to_regexp($name);
-    $pattern = qr/^ $pattern $/x;
+    unless( ref $match_test eq 'Regexp' ){
+        $pattern = $self->_glob_to_regexp($match_test);
+        $pattern = qr/^ $pattern $/x;
+    } else {
+        $pattern = $match_test
+    }
     my @match = ();
 
     for ( my $ti = 0; $ti < @$tests; $ti++ ) {
-        if ( $tests->[$ti]->filename =~ $pattern ) {
+        if ( $tests->[$ti]->filename    =~ $pattern || 
+             $tests->[$ti]->description =~ $pattern ) {
             push @match, splice @$tests, $ti, 1;
             $ti--;
         }
