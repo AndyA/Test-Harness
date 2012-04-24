@@ -1,1 +1,0 @@
-#!./misc/env.pl
