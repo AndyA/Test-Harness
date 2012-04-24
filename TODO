@@ -1,8 +1,0 @@
-TODO:
-
-    - Associate YAML diagnostic with the preceding test. Currently it's
-      necessary to look ahead past a test to discover whether it has a
-      diagnostic document.
-      
-    - Parallel testing scheduler rules.
-    
