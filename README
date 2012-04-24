@@ -4,7 +4,6 @@ http://github.com/Perl-Toolchain-Gang/Test-Harness
 
 Please update your remote for continued service.
 
-````git remote add origin git@github.com:Perl-Toolchain-Gang/Test-Harness.git
-````
+    git remote add origin git@github.com:Perl-Toolchain-Gang/Test-Harness.git
 
 Andy Armstrong, andy@hexten.net, 2012/04/24
