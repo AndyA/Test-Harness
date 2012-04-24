@@ -1,31 +1,9 @@
-Test-Harness 3.18
+Test::Harness is now looked after by the Perl-Toolchain-Gang hive mind and, as a result, the repository has moved to
 
-INSTALLATION
+http://github.com/Perl-Toolchain-Gang/Test-Harness
 
-To install Test::Harness using ExtUtils::MakeMaker do:
+Please update your remote for continued service.
 
-    perl Makefile.PL
-    make
-    make test
-    make install
+    git remote add origin git@github.com:Perl-Toolchain-Gang/Test-Harness.git
 
-To use Module::Build (preferred) do:
-
-    perl Build.PL
-    ./Build
-    ./Build test
-    ./Build install
-
-This will install Test::Harness and the "prove" program. Type
-
-    prove --help
-
-for more information.
-
-COPYRIGHT AND LICENCE
-
-Copyright (C) 2006, 2007 Curtis "Ovid" Poe
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
+Andy Armstrong, andy@hexten.net, 2012/04/24
